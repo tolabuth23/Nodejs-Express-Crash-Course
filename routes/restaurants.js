@@ -39,7 +39,7 @@ routes.delete("/:id",(req,res)=>{
     const  restaurantIndex = restaurants.findIndex(
         (restaurant)=>restaurant.id == restaurantId
     );
-    restaurants.slice(restaurantIndex, 1);
+    restaurants.splice(restaurantIndex, 1);
     res.send("This is delete finish!!!!");
     res.sendStatus(204);
 });
